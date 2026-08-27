@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Tomas Avila | Perfil digital</title>
+	<style>
+		:root {
+			--fondo: #07111f;
+			--panel: rgba(14, 31, 53, 0.82);
+			--borde: rgba(91, 220, 255, 0.25);
+			--cian: #5bdcff;
+			--verde: #b7f36b;
+			--texto: #eaf6ff;
+			--muted: #9db2c8;
+		}
+
+		* { box-sizing: border-box; }
+
+		body {
+			margin: 0;
+			color: var(--texto);
+			font-family: "Trebuchet MS", "Segoe UI", sans-serif;
+			background-color: var(--fondo);
+			background-image:
+				linear-gradient(rgba(91, 220, 255, 0.06) 1px, transparent 1px),
+				linear-gradient(90deg, rgba(91, 220, 255, 0.06) 1px, transparent 1px),
+				radial-gradient(circle at 80% 10%, rgba(31, 112, 144, 0.32), transparent 32rem);
+			background-size: 42px 42px, 42px 42px, auto;
+			line-height: 1.7;
+		}
+
+		.page {
+			width: min(1080px, 92%);
+			margin: auto;
+			padding: 28px 0 40px;
+		}
+
+		header {
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			gap: 24px;
+			padding: 18px 0 72px;
+		}
+
+		.marca {
+			color: var(--cian);
+			font-size: 0.9rem;
+			font-weight: bold;
+			letter-spacing: 0.15em;
+			text-transform: uppercase;
+		}
+
+		nav a, .correo { color: var(--muted); text-decoration: none; }
+		nav a:hover, .correo:hover { color: var(--verde); }
+
+		.hero {
+			max-width: 760px;
+			padding-bottom: 58px;
+		}
+
+		.etiqueta {
+			color: var(--verde);
+			font-size: 0.85rem;
+			font-weight: bold;
+			letter-spacing: 0.12em;
+			text-transform: uppercase;
+		}
+
+		h1 {
+			margin: 10px 0 14px;
+			font-size: clamp(2.8rem, 8vw, 5.8rem);
+			line-height: 0.98;
+			letter-spacing: -0.04em;
+		}
+
+		.hero h1 span { color: var(--cian); }
+		.hero p { max-width: 650px; color: var(--muted); font-size: 1.15rem; }
+
+		.grid {
+			display: grid;
+			grid-template-columns: repeat(2, 1fr);
+			gap: 18px;
+		}
+
+		section {
+			padding: 28px;
+			border: 1px solid var(--borde);
+			border-radius: 8px;
+			background: var(--panel);
+			box-shadow: 0 18px 45px rgba(0, 0, 0, 0.18);
+		}
+
+		section:first-child { border-top: 3px solid var(--cian); }
+		section:nth-child(2) { border-top: 3px solid var(--verde); }
+		h2 { margin-top: 0; color: var(--cian); font-size: 1.35rem; }
+		ul { margin: 0; padding-left: 20px; color: var(--muted); }
+		li::marker { color: var(--verde); }
+		p { color: var(--muted); }
+		strong { color: var(--texto); }
+		.dato { margin: 10px 0; padding-bottom: 8px; border-bottom: 1px solid rgba(157, 178, 200, 0.15); }
+		footer { padding-top: 42px; color: var(--muted); font-size: 0.9rem; }
+
+		@media (max-width: 680px) {
+			header { align-items: flex-start; flex-direction: column; padding-bottom: 48px; }
+			nav { font-size: 0.9rem; }
+			.grid { grid-template-columns: 1fr; }
+			section { padding: 22px; }
+		}
+	</style>
+</head>
+<body>
+	<div class="page">
+		<header>
+			<div class="marca">Perfil digital / 01</div>
+			<nav aria-label="Navegacion principal"><a href="mailto:tomahsavila12@gmail.com">Contactame</a></nav>
+		</header>
+
+		<main>
+			<section class="hero">
+				<div class="etiqueta">Ingenieria + creatividad + equipo</div>
+				<h1>Hola, soy <span>Tomas Avila.</span></h1>
+				<p>
+					Soy estudiante de primer semestre de Ingenieria en Inteligencia Artificial
+					en la Universidad Industrial de Santander. Me interesa construir un futuro
+					mejor usando software, conocimiento y curiosidad.
+				</p>
+			</section>
+
+			<div class="grid">
+				<section>
+					<h2>01 / Sobre mi</h2>
+					<p>Soy originario de Boyaca y estoy comenzando mi camino en una carrera que
+					combina tecnologia, creatividad y solucion de problemas.</p>
+					<p><strong>Correo:</strong> <a class="correo" href="mailto:tomahsavila12@gmail.com">tomahsavila12@gmail.com</a></p>
+				</section>
+
+				<section>
+					<h2>02 / Lo que me mueve</h2>
+					<ul>
+						<li>El software y su desarrollo.</li>
+						<li>La inteligencia artificial.</li>
+						<li>Aprender nuevas tecnologias.</li>
+						<li>Comprender como ayudar a las personas.</li>
+					</ul>
+				</section>
+
+				<section>
+					<h2>03 / Mi universidad</h2>
+					<p class="dato"><strong>Programa:</strong><br>Ingenieria en Inteligencia Artificial</p>
+					<p class="dato"><strong>Institucion:</strong><br>Universidad Industrial de Santander</p>
+					<p class="dato"><strong>Semestre:</strong><br>Primero</p>
+				</section>
+
+				<section>
+					<h2>04 / Fuera de pantalla</h2>
+					<p>En mi tiempo libre me gusta practicar voleibol. Me ayuda a mantenerme
+					activo, trabajar en equipo y disfrutar de un buen momento.</p>
+				</section>
+			</div>
+		</main>
+
+		<footer><p>Estudiante de IA desde Boyaca · Apasionado por la tecnologia y el voleibol.</p></footer>
+	</div>
+</body>
+</html>
